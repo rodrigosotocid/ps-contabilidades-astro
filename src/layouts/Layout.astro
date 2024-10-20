@@ -1,0 +1,31 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Servicios tributarios y de contabilidad por Pamela Soto Cid, Contador Auditor. Horario de atención de 9:00 a 19:00 horas de lunes a viernes."
+    />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>{title}</title>
+    <!-- <script src="https://kit.fontawesome.com/tu-kit.js" crossorigin="anonymous"></script> -->
+  </head>
+  <body class="font-sans bg-gray-100">
+    <slot />
+  </body>
+</html>
